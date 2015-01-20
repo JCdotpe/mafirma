@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-            var url_footer_disclaimer = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaDatosPantallaInicial";
+            var url_footer_disclaimer = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaDatosPantallaInicial";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_footer_disclaimer,
@@ -10,8 +10,8 @@ $(document).ready(function(){
                 success: function (data) {
 
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             $( "#footer-disclaimer" ).html(data[1].gls_disclaimer);
                         }
@@ -26,7 +26,7 @@ $(document).ready(function(){
 
             // TRIBUTARIO
 
-            var url_tributario_actualidad = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=21&strBoletin=14120017&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_tributario_actualidad = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=21&strBoletin=14120017&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_tributario_actualidad,
@@ -35,8 +35,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '21' && data.ListaResumenArticulosResult[i].cod_categoria == '01'){
@@ -53,7 +53,7 @@ $(document).ready(function(){
                 }
             });                
 
-            var url_tributario_ley = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=21&strBoletin=14120017&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_tributario_ley = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=21&strBoletin=14120017&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_tributario_ley,
@@ -62,8 +62,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '21' && data.ListaResumenArticulosResult[i].cod_categoria == '03'){
@@ -81,7 +81,7 @@ $(document).ready(function(){
             });    
 
 
-            var url_tributario_normas = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=21&strBoletin=14120017&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_tributario_normas = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=21&strBoletin=14120017&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_tributario_normas,
@@ -90,8 +90,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '21' && data.ListaResumenArticulosResult[i].cod_categoria == '04'){
@@ -109,7 +109,7 @@ $(document).ready(function(){
             });            
 
 
-            var url_tributario_novedades = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaNovedades";
+            var url_tributario_novedades = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaNovedades";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_tributario_novedades,
@@ -118,8 +118,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '21'){
@@ -137,7 +137,7 @@ $(document).ready(function(){
             });            
 
 
-            var url_tributario_publicaciones = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaPublicaciones";
+            var url_tributario_publicaciones = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaPublicaciones";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_tributario_publicaciones,
@@ -146,8 +146,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '21'){
@@ -164,7 +164,7 @@ $(document).ready(function(){
                 }
             });                 
 
-            var url_tributaria_area_tributaria = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaAbogadosBoletin";
+            var url_tributaria_area_tributaria = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaAbogadosBoletin";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_tributaria_area_tributaria,
@@ -173,12 +173,12 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '21'){
-                                    $("#tributaria-area-tributaria").append("<li><a href='mailto:"+data[i].gls_mail+"?Subject='>"+data[i].gls_abogado+"</a></li>");
+                                    $("#tributaria-area-tributaria").append("<li><a href='mailto:"+data[i].gls_mail+"'>"+data[i].gls_abogado+"</a></li>");
                                 }
                             }                            
                         }
@@ -191,7 +191,7 @@ $(document).ready(function(){
                 }
             });            
 
-            var url_tributario_ediciones = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaEdicionesAnteriores";
+            var url_tributario_ediciones = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaEdicionesAnteriores";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_tributario_ediciones,
@@ -200,8 +200,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '21'){
@@ -218,7 +218,7 @@ $(document).ready(function(){
                 }
             });              
 
-            var url_tributario_frecuentes = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaTagsFrecuente";
+            var url_tributario_frecuentes = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaTagsFrecuente";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_tributario_frecuentes,
@@ -227,8 +227,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '21'){
@@ -246,7 +246,7 @@ $(document).ready(function(){
             });              
 
             // LABORAL
-            var url_laboral_actualidad = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=01&strBoletin=15010001&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_laboral_actualidad = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=01&strBoletin=15010001&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_laboral_actualidad,
@@ -255,8 +255,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '01' && data.ListaResumenArticulosResult[i].cod_categoria == '01'){
@@ -273,7 +273,7 @@ $(document).ready(function(){
                 }
             });
 
-            var url_laboral_pronunciamientos = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=01&strBoletin=15010001&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_laboral_pronunciamientos = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=01&strBoletin=15010001&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_laboral_pronunciamientos,
@@ -282,8 +282,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '01' && data.ListaResumenArticulosResult[i].cod_categoria == '06'){
@@ -302,7 +302,7 @@ $(document).ready(function(){
 
 
 
-            var url_laboral_alerta = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=01&strBoletin=15010001&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_laboral_alerta = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=01&strBoletin=15010001&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_laboral_alerta,
@@ -311,8 +311,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '01' && data.ListaResumenArticulosResult[i].cod_categoria == '07'){
@@ -331,7 +331,7 @@ $(document).ready(function(){
 
 
 
-            var url_laboral_novedades = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaNovedades";
+            var url_laboral_novedades = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaNovedades";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_laboral_novedades,
@@ -340,8 +340,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '01'){
@@ -360,7 +360,7 @@ $(document).ready(function(){
 
 
 
-            var url_laboral_publicaciones = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaPublicaciones";
+            var url_laboral_publicaciones = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaPublicaciones";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_laboral_publicaciones,
@@ -369,8 +369,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '01'){
@@ -388,7 +388,7 @@ $(document).ready(function(){
             });            
 
 
-            var url_laboral_area_tributaria = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaAbogadosBoletin";
+            var url_laboral_area_tributaria = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaAbogadosBoletin";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_laboral_area_tributaria,
@@ -397,12 +397,12 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '01'){
-                                    $("#laboral-area-tributaria").append("<li><a href='mailto:"+data[i].gls_mail+"?Subject='>"+data[i].gls_abogado+"</a></li>");
+                                    $("#laboral-area-tributaria").append("<li><a href='mailto:"+data[i].gls_mail+"'>"+data[i].gls_abogado+"</a></li>");
                                 }
                             }                            
                         }
@@ -417,7 +417,7 @@ $(document).ready(function(){
 
 
 
-            var url_laboral_ediciones = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaEdicionesAnteriores";
+            var url_laboral_ediciones = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaEdicionesAnteriores";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_laboral_ediciones,
@@ -426,8 +426,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '01'){
@@ -446,7 +446,7 @@ $(document).ready(function(){
 
 
 
-            var url_laboral_frecuentes = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaTagsFrecuente";
+            var url_laboral_frecuentes = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaTagsFrecuente";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_laboral_frecuentes,
@@ -455,8 +455,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '01'){
@@ -477,7 +477,7 @@ $(document).ready(function(){
 
             // AMBIENTAL
 
-            var url_ambiental_actualidad = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=12&strBoletin=15010002&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_ambiental_actualidad = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=12&strBoletin=15010002&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_ambiental_actualidad,
@@ -486,8 +486,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '12' && data.ListaResumenArticulosResult[i].cod_categoria == '01'){
@@ -504,7 +504,7 @@ $(document).ready(function(){
                 }
             });            
 
-            var url_ambiental_radar = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=12&strBoletin=15010002&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_ambiental_radar = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=12&strBoletin=15010002&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_ambiental_radar,
@@ -513,8 +513,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '12' && data.ListaResumenArticulosResult[i].cod_categoria == '08'){
@@ -532,7 +532,7 @@ $(document).ready(function(){
             });
 
 
-            var url_ambiental_normas = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=12&strBoletin=15010002&strCategoria=&blnUltimo=false&blnTodos=false";
+            var url_ambiental_normas = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=12&strBoletin=15010002&strCategoria=&blnUltimo=false&blnTodos=false";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_ambiental_normas,
@@ -541,8 +541,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.ListaResumenArticulosResult.length; i++) {
                                 if(data.ListaResumenArticulosResult[i].cod_area == '12' && data.ListaResumenArticulosResult[i].cod_categoria == '04'){
@@ -560,7 +560,7 @@ $(document).ready(function(){
             });
 
 
-           var url_ambiental_novedades = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaNovedades";
+           var url_ambiental_novedades = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaNovedades";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_ambiental_novedades,
@@ -569,8 +569,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '12'){
@@ -589,7 +589,7 @@ $(document).ready(function(){
 
 
 
-            var url_ambiental_publicaciones = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaPublicaciones";
+            var url_ambiental_publicaciones = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaPublicaciones";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_ambiental_publicaciones,
@@ -598,8 +598,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '12'){
@@ -616,7 +616,7 @@ $(document).ready(function(){
                 }
             });                
 
-            var url_ambiental_area_tributaria = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaAbogadosBoletin";
+            var url_ambiental_area_tributaria = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaAbogadosBoletin";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_ambiental_area_tributaria,
@@ -625,12 +625,12 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '12'){
-                                    $("#ambiental-area-tributaria").append("<li><a href='mailto:"+data[i].gls_mail+"?Subject='>"+data[i].gls_abogado+"</a></li>");
+                                    $("#ambiental-area-tributaria").append("<li><a href='mailto:"+data[i].gls_mail+"'>"+data[i].gls_abogado+"</a></li>");
                                 }
                             }                            
                         }
@@ -644,7 +644,7 @@ $(document).ready(function(){
             });
 
 
-            var url_ambiental_ediciones = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaEdicionesAnteriores";
+            var url_ambiental_ediciones = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaEdicionesAnteriores";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_ambiental_ediciones,
@@ -653,8 +653,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '12'){
@@ -672,7 +672,7 @@ $(document).ready(function(){
             });              
 
 
-            var url_ambiental_frecuentes = "http://www.mafirmapublicaciones.com/Servicios/BoletinMovilService.svc/ListaTagsFrecuente";
+            var url_ambiental_frecuentes = "http://mafirmapublicaciones.com.rws1.my-hosting-panel.com/Servicios/BoletinMovilService.svc/ListaTagsFrecuente";
             jQuery.support.cors = true;
             $.ajax({
                 url: url_ambiental_frecuentes,
@@ -681,8 +681,8 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (data) {
                     try {
-                        if (data == null)
-                            alert('Error al validar usuario');
+                        if (data == null){}
+                            
                         else {
                             for(var i=0; i<data.length; i++) {
                                 if(data[i].cod_area == '12'){
