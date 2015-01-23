@@ -1,0 +1,556 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="icon" type="image/png" href="logo.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="index" />
+    <meta name="description" content="SIDAM - Modulo de Boletines" />
+    <meta name="keywords" content="sidam, jamsoft, boletines" />
+    <meta name="author" content="JAMSoft" />
+    <title>Pruebas Datos Boletin</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+    <style type="text/css">
+        pre.cscode {
+            margin: 0;
+            overflow: auto;
+            background-color: #ffffff;
+        }
+
+        .cscode code {
+            font-family: Consolas,"Courier New",Courier,Monospace;
+            font-size: 10pt;
+            color: #000000;
+        }
+
+        .cscode .key {
+            color: #0000ff;
+        }
+
+        .cscode .com {
+            color: #008000;
+        }
+
+        .cscode .str {
+            color: #a31515;
+        }
+
+        table.cscode {
+            width: 100%;
+        }
+
+        td.cscode {
+            width: 150px;
+            text-align: center;
+            vertical-align: middle;
+            padding: 2px;
+        }
+
+        button.cscode {
+            width: 100%;
+            text-align: center;
+            vertical-align: middle;
+            height: 32px;
+        }
+
+        b.cscode {
+            text-align: left;
+            vertical-align: text-bottom;
+            font-family: Segoe UI Light;
+            font-size: 14px;
+            color: #0000ff;
+        }
+
+        .tdInput td {
+            width: 150px;
+            text-align: center;
+            vertical-align: bottom;
+            padding: 2px;
+        }
+        .tdInput1 td {
+            width: 350px;
+            text-align: center;
+            vertical-align: bottom;
+            padding: 2px;
+        }
+
+        input.tdInput {
+            width: 150px;
+            text-align: left;
+            vertical-align: middle;
+            height: 22px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+        input.tdInput1 {
+            width: 350px;
+            text-align: left;
+            vertical-align: middle;
+            height: 22px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+
+        select.tdInput {
+            width: 150px;
+            text-align: left;
+            vertical-align: middle;
+            height: 28px;
+            font-family: Calibri;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body style="background: whitesmoke">
+    <script type="text/javascript">
+        function GetAbogados() {
+            var url = "Servicios/BoletinMovilService.svc/ListaAbogadosBoletin";
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetDatosPantallaInicial() {
+            var url = "Servicios/BoletinMovilService.svc/ListaDatosPantallaInicial";
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetDatosEdicionesAnteriores() {
+            var url = "Servicios/BoletinMovilService.svc/ListaEdicionesAnteriores";
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetDatosImagenesArea() {
+            var url = "Servicios/BoletinMovilService.svc/ListaImagenesArea";
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetDatosPublicaciones() {
+            var url = "Servicios/BoletinMovilService.svc/ListaPublicaciones";
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetDatosNovedades() {
+            var url = "Servicios/BoletinMovilService.svc/ListaNovedades";
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetDatosTagsFrecuentes() {
+            var url = "Servicios/BoletinMovilService.svc/ListaTagsFrecuente";
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetResumenArticulos() {
+            var area = $("#cmbArea").val();
+            var boletin = $("#txtBoletin").val();
+            var categoria = $("#txtCategoria").val();
+            var ultimo = $("#cmbUtimo").val();
+            var activos = $("#cmbActivos").val();
+            var url = "Servicios/BoletinMovilService.svc/ListaResumenArticulos?strArea=" + area + "&strBoletin=" + boletin + "&strCategoria=" + categoria + "&blnUltimo=" + ultimo + "&blnTodos=" + activos;
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetResumenNotas() {
+            var area = $("#cmbArea2").val();
+            var tipo = $("#cmbTipoNota").val();
+            var nota = $("#txtNotaPublicacion").val();
+            var url = "Servicios/BoletinMovilService.svc/ListaResumenNotasBoletin?strArea=" + area + "&strTipo=" + tipo + "&strNotaBoletin=" + nota;
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+        function GetBusquedaArticulos() {
+            var area = $("#cmbArea1").val();
+            var busqueda = $("#txtTextoBoletin").val();
+            var tag = $("#txtTag").val();
+            var url = "Servicios/BoletinMovilService.svc/ListaBusquedaBoletines?strArea=" + area + "&strTextoBusqueda=" + busqueda + "&strTag=" + tag;
+            window.open(url, "_blank");
+            jQuery.support.cors = true;
+            $.ajax({
+                url: url,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    try {
+                        if (data == null)
+                            alert('Error al validar usuario');
+                        else {
+                            alert(data);
+                        }
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+    </script>
+    <form>
+        <table>
+            <tr style="height: 8px" />
+            <tr>
+                <td colspan="7" style="font-family: Segoe UI Light; font-size: 24px">Datos Pantalla Inicial</td>
+            </tr>
+            <tr style="height: 2px" />
+            <tr>
+                <td class="cscode"><button class="cscode" onclick="GetAbogados()" type="button">Abogados</button></td>
+                <td class="cscode"><button class="cscode" onclick="GetDatosPantallaInicial()" type="button">Pantalla Inicial</button></td>
+                <td class="cscode"><button class="cscode" onclick="GetDatosEdicionesAnteriores()" type="button">Ediciones Anteriores</button></td>
+                <td class="cscode"><button class="cscode" onclick="GetDatosImagenesArea()" type="button">Imagenes Area</button></td>
+                <td class="cscode"><button class="cscode" onclick="GetDatosPublicaciones()" type="button">Publicaciones</button></td>
+                <td class="cscode"><button class="cscode" onclick="GetDatosNovedades()" type="button">Novedades</button></td>
+                <td class="cscode"><button class="cscode" onclick="GetDatosTagsFrecuentes()" type="button">Tags Frecuentes</button></td>
+            </tr>
+            <tr style="height: 8px" />
+            <tr>
+                <td colspan="7" style="font-family: Segoe UI Light; font-size: 24px">Resumen de Articulos</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="padding: 8px; outline: 1px solid green; background: lightcyan;">
+                    <pre class="cscode" style="background: transparent"><code><span class="com">/// &lt;summary&gt;</span>
+<span class="com">/// Devuelve el Resumen de los Articulos por Categoria</span>
+<span class="com">/// &lt;/summary&gt;</span>
+<span class="com">/// &lt;param name="strArea"&gt;Codigo del Area del cual se quieren obtener los Articulos&lt;/param&gt;</span>
+<span class="com">/// &lt;param name="strBoletin"&gt;Codigo del Boletin del cual se quieren obtener los Articulos&lt;/param&gt;</span>
+<span class="com">/// &lt;param name="strCategoria"&gt;Codigo de la Categoria del cual se quieren obtener los Articulos&lt;/param&gt;</span>
+<span class="com">/// &lt;param name="blnUltimo"&gt;Indica si se devuelve solo los articulos del Ultimo Boletin ingresado del Area especificada&lt;/param&gt;</span>
+<span class="com">/// &lt;param name="blnTodos"&gt;Indica si se va a devolver todos los Articulos y no solo los activos&lt;/param&gt;</span>
+<span class="com">/// &lt;returns&gt;&lt;/returns&gt;</span>
+[OperationContract(Name = <span class="str">"ListaResumenArticulos"</span>)]
+IEnumerable&lt;EArticuloBoletin&gt; ListaResumenArticulos(<span class="key">string</span> strArea, <span class="key">string</span> strBoletin, <span class="key">string</span> strCategoria, <span class="key">bool</span> blnUltimo, <span class="key">bool</span> blnTodos);</code></pre>
+                </td>
+            </tr>
+            <tr style="height: 4px" />
+            <tr>
+                <td class="tdInput">
+                    <b class="cscode">Area</b>
+                    <br />
+                    <select id="cmbArea" class="tdInput">
+                        <option selected="selected" label="" value="" />
+                        <option label="Ambiental" value="12" />
+                        <option label="Laboral" value="01" />
+                        <option label="Tributario" value="21" />
+                    </select>
+                </td>
+                <td class="tdInput">
+                    <b class="cscode">Codigo Boletin</b>
+                    <br />
+                    <input id="txtBoletin" class="tdInput" maxlength="8" />
+                </td>
+                <td class="tdInput">
+                    <b class="cscode">Codigo Categoria</b>
+                    <br />
+                    <input id="txtCategoria" class="tdInput" maxlength="8" />
+                </td>
+                <td class="tdInput">
+                    <b class="cscode">¿Solo ultimo Boletin?</b>
+                    <br />
+                    <select id="cmbUtimo" class="tdInput">
+                        <option selected="selected" label="Si" value="true" />
+                        <option label="No" value="false" />
+                    </select>
+                </td>
+                <td class="tdInput">
+                    <b class="cscode">¿Solo activos?</b>
+                    <br />
+                    <select id="cmbActivos" class="tdInput">
+                        <option selected="selected" label="Si" value="true" />
+                        <option label="No" value="false" />
+                    </select>
+                </td>
+                <td class="tdInput"></td>
+                <td class="tdInput"></td>
+            </tr>
+            <tr style="height: 2px" />
+            <tr>
+                <td colspan="7" class="cscode" style="text-align: left"><button class="cscode" style="width: 200px;" onclick="GetResumenArticulos()" type="button">Mostrar Resultados</button></td>
+            </tr>
+            <!--BUSQUEDA-->
+            <tr style="height: 8px" />
+            <tr>
+                <td colspan="7" style="font-family: Segoe UI Light; font-size: 24px">Busqueda de Articulos y Tags</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="padding: 8px; outline: 1px solid green; background: lightcyan;">
+                    <pre style="margin:0; overflow:auto; background-color:transparent;"><code style="font-family:Consolas,&quot;Courier New&quot;,Courier,Monospace; font-size:10pt; color:#000000;"><span style="color:#008000;">/// &lt;summary&gt;</span>
+<span style="color:#008000;">/// Realiza una busqueda de los Articulos de los Boletines segun los parametros indicados</span>
+<span style="color:#008000;">/// &lt;/summary&gt;</span>
+<span style="color:#008000;">/// &lt;param name="strArea"&gt;Codigo del Area del cual se quiere devolver los articulo&lt;/param&gt;</span>
+<span style="color:#008000;">/// &lt;param name="strTextoBusqueda"&gt;Texto en los articulos que se va a buscar&lt;/param&gt;</span>
+<span style="color:#008000;">/// &lt;param name="strTag"&gt;Texto del Tag de los articulos que se van a devolver&lt;/param&gt;</span>
+<span style="color:#008000;">/// &lt;returns&gt;&lt;/returns&gt;</span>
+[OperationContract(Name = <span style="color:#a31515;">"ListaBusquedaBoletines"</span>)]
+List&lt;EArticuloBoletin&gt; ListaBusquedaBoletines(<span style="color:#0000ff;">string</span> strArea, <span style="color:#0000ff;">string</span> strTextoBusqueda, <span style="color:#0000ff;">string</span> strTag);</code></pre>
+                </td>
+            </tr>
+            <tr style="height: 4px" />
+            <tr>
+                <td class="tdInput">
+                    <b class="cscode">Area</b>
+                    <br />
+                    <select id="cmbArea1" class="tdInput">
+                        <option selected="selected" label="" value="" />
+                        <option label="Ambiental" value="12" />
+                        <option label="Laboral" value="01" />
+                        <option label="Tributario" value="21" />
+                    </select>
+                </td>
+                <td class="tdInput1" colspan="2">
+                    <b class="cscode">Texto Busqueda</b>
+                    <br />
+                    <input id="txtTextoBoletin" class="tdInput1" maxlength="100" />
+                </td>
+                <td class="tdInput1" colspan="2">
+                    <b class="cscode">Texto Tag</b>
+                    <br />
+                    <input id="txtTag" class="tdInput1" maxlength="50" />
+                </td>
+                <td class="tdInput"></td>
+                <td class="tdInput"></td>
+            </tr>
+            <tr style="height: 2px" />
+            <tr>
+                <td colspan="7" class="cscode" style="text-align: left"><button class="cscode" style="width: 200px;" onclick="GetBusquedaArticulos()" type="button">Mostrar Resultados</button></td>
+            </tr>
+            <!--NOTAS BOLETIN-->
+            <tr style="height: 8px" />
+            <tr>
+                <td colspan="7" style="font-family: Segoe UI Light; font-size: 24px">Resumen de Novedades y Publicaciones</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="padding: 8px; outline: 1px solid green; background: lightcyan;">
+                    <pre style="margin:0; overflow:auto; background-color:transparent;"><code style="font-family:Consolas,&quot;Courier New&quot;,Courier,Monospace; font-size:10pt; color:#000000;"><span style="color:#008000;">/// &lt;summary&gt;</span>
+<span style="color:#008000;">/// Devuelve la relacion de Novedades y Publicacion segun los parametros dados</span>
+<span style="color:#008000;">/// &lt;/summary&gt;</span>
+<span style="color:#008000;">/// &lt;param name="strArea"&gt;Codigo de la Area donde se quieren obtener las Novedades/Publicaciones&lt;/param&gt;</span>
+<span style="color:#008000;">/// &lt;param name="strTipo"&gt;Codigo del Tipo de Nov./Pub. donde se quieren obtener las Novedades/Publicaciones&lt;/param&gt;</span>
+<span style="color:#008000;">/// &lt;param name="strNotaBoletin"&gt;Codigo de la Nov./Pub. del se quieren obtener los datos.&lt;/param&gt;</span>
+<span style="color:#008000;">/// &lt;returns&gt;&lt;/returns&gt;</span>
+[OperationContract(Name = <span style="color:#a31515;">"ListaResumenNotasBoletin"</span>)]
+List&lt;ENotaBoletin&gt; ListaResumenNotasBoletin(<span style="color:#0000ff;">string</span> strArea, <span style="color:#0000ff;">string</span> strTipo, <span style="color:#0000ff;">string</span> strNotaBoletin);</code></pre>
+                </td>
+            </tr>
+            <tr style="height: 4px" />
+            <tr>
+                <td class="tdInput">
+                    <b class="cscode">Area</b>
+                    <br />
+                    <select id="cmbArea2" class="tdInput">
+                        <option selected="selected" label="" value="" />
+                        <option label="Ambiental" value="12" />
+                        <option label="Laboral" value="01" />
+                        <option label="Tributario" value="21" />
+                    </select>
+                </td>
+                <td class="tdInput">
+                    <b class="cscode">Codigo Tipo</b>
+                    <br />
+                    <select id="cmbTipoNota" class="tdInput">
+                        <option selected="selected" label="" value="" />
+                        <option label="Nota" value="N" />
+                        <option label="Publicacion" value="P" />
+                    </select>
+                </td>
+                <td class="tdInput">
+                    <b class="cscode">Codigo Nota/Publicacion</b>
+                    <br />
+                    <input id="txtNotaPublicacion" class="tdInput" maxlength="8" />
+                </td>
+                <td class="tdInput">
+                </td>
+                <td class="tdInput">
+                </td>
+                <td class="tdInput"></td>
+                <td class="tdInput"></td>
+            </tr>
+            <tr style="height: 2px" />
+            <tr>
+                <td colspan="7" class="cscode" style="text-align: left"><button class="cscode" style="width: 200px;" onclick="GetResumenNotas()" type="button">Mostrar Resultados</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

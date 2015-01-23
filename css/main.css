@@ -200,6 +200,10 @@ ul.news li p{
     margin: 0;
 }
 
+body.laboral .slider h1, body.laboral .slider span{
+    color: black;
+}
+
 .slider span{
     color: #fff;
     position: absolute;
@@ -255,3 +259,211 @@ footer{
 .laboral .main-news hr.special-title{
     border-color: #009acf;
 }
+
+/* Customise by JhonatanRivera*/
+.widget .panel-heading {
+    padding: 3px 0;
+}
+
+.widget #accordionAno {
+    padding-bottom: 0px;
+    color: #435664;
+}
+
+.widget #accordionAno a:before {
+    content: "» ";
+    color: #435664;
+}
+
+.widget #accordionAno a  {
+    color: #435664;
+    font-size: 12px;
+    display: block;
+}
+.aChild .accordion-inner{
+    padding-left: 10px;
+    color: #435664;
+}
+
+.aChild .accordion-inner h5{
+    font-size: 10px;
+    color: #435664;
+}
+
+
+.widget .panel-group .panel + .panel {
+    margin-top: 0px;
+}
+
+.widget .panel-body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+.main-news h5 {
+    background: none repeat scroll 0 0 #154671;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-left: -37px;
+    margin-top: 0;
+    padding: 0 0 0 10px;
+}
+
+
+h5 .art-title {
+    display: inline-block;
+    height: 30px;
+    margin-top: -1px;
+    width: 19px;
+}
+
+
+.laboral .title-main, body.laboral  li.toLink:hover, body.laboral  h4.toLink a:hover, body.laboral  a.toLink:hover, body.laboral li.toLink a:hover{
+    background: none repeat scroll 0px 0px rgb(0, 154, 207); color: rgb(255, 255, 255) ! important;
+}
+
+.tributario .title-main, body.tributario  li.toLink:hover, body.tributario  h4.toLink a:hover, body.tributario  a.toLink:hover, body.tributario li.toLink a:hover{
+    background: none repeat scroll 0 0 #154671 !important;
+    color: #fff !important;
+    width: 100%;
+}
+a.ambiental.title-main, body.ambiental  li.toLink:hover, body.ambiental  h4.toLink a:hover, body.ambiental  a.toLink:hover, body.ambiental li.toLink a:hover{
+    background: none repeat scroll 0 0 #2dbb28 !important;
+    color: #fff !important;
+}
+
+body.tributario  li.toLink,body.ambiental  li.toLink,body.laboral  li.toLink, .news p:nth-child(1),span.read-more {
+    cursor: pointer;
+}
+
+span.tags{
+    color: red;
+    font-weight: bold;
+}
+
+span.read-more {
+    color: #d47928;
+}
+
+.slider img {
+        height: 105px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+    .search-style {
+        margin-top: 30px;
+    }
+
+    .bg-6-news{
+        height: auto;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+
+} /* END */
+
+@media (min-width: 767px) and (max-width: 992px) {
+
+    .slider img {
+        height: 105px;
+    }
+
+} /* END */
+
+
+@media (max-width: 767px) {
+
+    .slider img {
+        height: 66px;
+    }    
+    
+    .slider h1 {
+        font-size: 20px;
+        top: 10px;
+    }
+
+    .slider span {
+        top: 37px;
+         font-size: 85%;
+    }    
+
+    .bg-6-news{
+        height: auto;
+        max-height: 100%;
+        overflow-y: auto;
+        margin-left: -15px;
+    }
+
+    .broken-6-news h2, .broken-6-news hr.special-title {
+        margin-left: -37px;
+    }    
+
+} /* END */
+
+
+@media (max-width: 500px) {
+
+    .navbar-brand {
+        padding-bottom: 0;
+        padding-top: 9px;
+    }
+
+    .navbar-brand img {
+        max-width: 110px;
+    }    
+
+    .slider img {
+        height: 60px;
+    }
+
+    .main-news h2, .sidebar h2{
+        font-size: 15px;
+    }
+
+    ul.news li p {
+        color: #435664;
+        font-size: 90%;
+    }    
+
+    footer {
+        font-size: 90%;
+    }
+
+} /* END */
+
+
+@media (max-width: 370px) {
+
+    .slider h1 {
+        font-size: 18px;
+        top: 13px;
+    }
+
+    .slider span {
+        font-size: 80%;
+    }
+
+} /* END */
+
+
+@media (max-width: 310px) {
+
+    .slider h1 {
+        font-size: 14px;
+        top: 24px;
+    }
+
+    .slider span {
+        font-size: 60%;
+        top: 43px;
+    }
+
+} /* END */
